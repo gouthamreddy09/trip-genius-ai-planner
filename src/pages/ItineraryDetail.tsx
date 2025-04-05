@@ -47,7 +47,6 @@ const ItineraryDetail = () => {
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
-    // Fetch itinerary data from localStorage or samples
     const savedItineraries = JSON.parse(localStorage.getItem('itineraries') || '[]');
     const sampleItineraries = getSampleItineraries();
     const allItineraries = [...savedItineraries, ...sampleItineraries];
@@ -61,7 +60,6 @@ const ItineraryDetail = () => {
     setLoading(false);
   }, [id]);
   
-  // Format date for display
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -121,7 +119,6 @@ const ItineraryDetail = () => {
       
       <main className="flex-grow py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb and Back link */}
           <div className="mb-6">
             <Link to="/itineraries" className="text-travel-blue flex items-center hover:underline">
               <ArrowLeft className="h-4 w-4 mr-1" />
@@ -129,7 +126,6 @@ const ItineraryDetail = () => {
             </Link>
           </div>
           
-          {/* Itinerary Header */}
           <div className="bg-white shadow rounded-lg mb-8">
             <div className="px-6 py-8">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -232,7 +228,6 @@ const ItineraryDetail = () => {
             </div>
           </div>
           
-          {/* Itinerary Content */}
           <Tabs defaultValue="day-by-day" className="w-full">
             <TabsList className="mb-6">
               <TabsTrigger value="day-by-day">Day by Day</TabsTrigger>
