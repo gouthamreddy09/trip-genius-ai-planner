@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -39,6 +38,7 @@ import {
   Bus,
   Taxi,
   Bookmark,
+  Car
 } from "lucide-react";
 
 const ItineraryDetail = () => {
@@ -358,7 +358,7 @@ const ItineraryDetail = () => {
                 <CardContent>
                   <div className="text-center py-8">
                     <div className="mx-auto rounded-full bg-blue-100 p-3 w-12 h-12 flex items-center justify-center mb-4">
-                      <Taxi className="h-6 w-6 text-travel-blue" />
+                      <Car className="h-6 w-6 text-travel-blue" />
                     </div>
                     <h3 className="text-lg font-medium text-gray-900 mb-1">
                       Coming Soon
